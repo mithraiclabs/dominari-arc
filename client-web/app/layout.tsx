@@ -1,6 +1,7 @@
 // need this to import tailwind
 import '@/styles/globals.css';
 import { Navbar } from '../components/Navbar';
+import { SolanaProviders } from '../components/SolanaProviders';
 import { KeypairProvider } from '../context/KeypairContext';
 
 export default function RootLayout({
@@ -14,10 +15,12 @@ export default function RootLayout({
         <title>Dominari</title>
       </head>
       <body className="h-screen w-screen bg-zinc-800 text-white">
-        <KeypairProvider>
-          <Navbar />
-          {children}
-        </KeypairProvider>
+        <SolanaProviders>
+          <KeypairProvider>
+            <Navbar />
+            {children}
+          </KeypairProvider>
+        </SolanaProviders>
       </body>
     </html>
   );

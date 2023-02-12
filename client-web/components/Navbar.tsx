@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 import { useTWBreakpoint } from '../hooks/useTailwindMediaQuery';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 export const Navbar = () => {
   const isLg = useTWBreakpoint('lg');
@@ -37,6 +38,11 @@ export const Navbar = () => {
               className="block w-full flex-grow lg:flex lg:w-auto lg:items-center lg:justify-end"
               static={isLg}
             >
+              <Menu.Item>
+                <div className="mr-4">
+                  <WalletMultiButton />
+                </div>
+              </Menu.Item>
               <Menu.Item>
                 <Link
                   href="/games/new"
