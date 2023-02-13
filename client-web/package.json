@@ -23,6 +23,8 @@
     "@solana/web3.js": "1.73.2",
     "bs58": "5.0.0",
     "clsx": "1.2.1",
+    "crypto": "1.0.1",
+    "dominari-sdk": "../dominari-sdk/dominari-sdk-bundler",
     "encoding": "0.1.13",
     "next": "latest",
     "react": "18.2.0",

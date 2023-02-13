@@ -2,6 +2,7 @@
 import '@/styles/globals.css';
 import { Navbar } from '../components/Navbar';
 import { SolanaProviders } from '../components/SolanaProviders';
+import { DominariSdkProvider } from '../context/Domainari';
 import { KeypairProvider } from '../context/KeypairContext';
 
 export default function RootLayout({
@@ -16,10 +17,12 @@ export default function RootLayout({
       </head>
       <body className="h-screen w-screen bg-zinc-800 text-white">
         <SolanaProviders>
-          <KeypairProvider>
-            <Navbar />
-            {children}
-          </KeypairProvider>
+          <DominariSdkProvider>
+            <KeypairProvider>
+              <Navbar />
+              {children}
+            </KeypairProvider>
+          </DominariSdkProvider>
         </SolanaProviders>
       </body>
     </html>

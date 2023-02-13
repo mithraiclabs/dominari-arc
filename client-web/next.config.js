@@ -5,6 +5,13 @@ const nextConfig = {
     // Required:
     appDir: true,
   },
+  webpack: (config) => {
+    config.experiments = {
+      asyncWebAssembly: true,
+      layers: true,
+    }
+    return config;
+  }
 };
 
 module.exports = nextConfig;

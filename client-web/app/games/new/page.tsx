@@ -7,10 +7,10 @@ import { Test } from './test';
 export default function Page() {
   return (
     <Test>
-      <div className="m-4 mx-6">
-        <p className="text-xl">Create New Game</p>
-        <NewGameForm />
-      </div>
+        <div className="m-4 mx-6">
+          <p className="text-xl">Create New Game</p>
+          <NewGameForm />
+        </div>
     </Test>
   );
 }
